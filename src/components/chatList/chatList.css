@@ -1,0 +1,110 @@
+.chat-list {
+    border: 1px solid #e3e3e3;
+    max-height: 100%;
+}
+.head-list {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e3e3e3;
+    padding: 1.3rem;
+}
+.photo-profile {
+    position: relative;
+}
+.person-photo {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 0.8rem;
+    cursor: pointer;
+}
+.online {
+    position: absolute;
+    color: #65A86E;
+    transform: translate(-24px, 27px);
+}
+.input-field {
+    position: relative;
+}
+.search-chat {
+    width: 100%;
+    background-color: #fff;
+    color: #111;
+    padding: 0.7rem 2rem;
+    margin-top: 1.5rem;
+    border: 1px solid #a8a8a8a6;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.search-chat:focus {
+    outline: none !important;
+    border: 1px solid #4094bb;
+}
+.search-icon {
+    position: absolute;
+    color: gray;
+    transform: translate(10px, 35px);
+}
+h2 {
+    margin-left: 0.7rem;
+    color: #4094bb;
+    font-weight: 400;
+}
+.messages {
+    overflow-y: auto;
+    height: 65vh;
+}
+.messages::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+.message-info {
+    border-bottom: 1px solid #e3e3e3;
+    padding: 1.3rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr;
+    width: 100%;
+    cursor: pointer;
+}
+.active {
+    background-color: #f5f5f5;
+}
+.message-name {
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: left;
+}
+.message-name h6 {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6F6F6F;
+    font-weight: 400;
+}
+.message-name p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #9E9E9E;
+}
+.date {
+    text-align: right;
+    color: #5B5B5B;
+    font-size: 0.75rem;
+    padding-left: 1rem;
+}
+
+/* ================ MEDIA QUERIES (SMALL DEVICES) ================= */
+@media screen and (max-width: 600px) {
+    .head-list, .date {
+        display: none;
+    }
+    .messages {
+        height: 90vh;
+    }
+    .message-info {
+    grid-template-columns: 1fr 2fr;
+    }
+}
